@@ -5,7 +5,7 @@ services:
 
 env:
   - TAGS=latest,0.10.6 ARCHS=386,amd64,arm5,arm6,arm7,arm64 PLUGINS= SET=raw
-  - TAGS=latest,0.10.6 ARCHS=386,amd64,arm5,arm6,arm7,arm64 PLUGINS=http.cors,http.expires,http.filter,http.prometheus,http.realip SET=semi
+  - TAGS=latest,0.10.6 ARCHS=386,amd64,arm5,arm6,arm7,arm64 PLUGINS=http.cache,http.cors,http.expires,http.filter,http.prometheus,http.realip SET=semi
 
 script:
   - ./build.sh
