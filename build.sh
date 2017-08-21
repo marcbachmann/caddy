@@ -2,7 +2,7 @@
 set -eu
 # $ARCH one of 386, amd64, arm5, arm6, arm7, arm64
 ARCHS=$(echo ${ARCHS:-amd64} | tr ',' ' ')
-TAGS=$(echo ${TAG:-latest} | tr ',' ' ')
+TAGS=$(echo ${TAGS:-latest} | tr ',' ' ')
 SET=${SET:-raw}
 
 # $PLUGINS is a comma separated list of plugins listed in the caddy documentation
