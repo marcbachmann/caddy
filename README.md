@@ -30,6 +30,16 @@ e.g. `latest-amd64-raw`
 - `raw`, no plugins
 - `semi`, http.cache,http.cors,http.expires,http.filter,http.prometheus,http.realip
 
+## SSL Certificates
+
+Caddy mounts writes all ssl certificates into `/.caddy`. So if you want to persist them, you can mount a volume there.
+
+e.g.
+```
+docker run -d --restart=always --name caddy -v /etc/caddy:/etc/caddy -v /tmp/caddy:/.caddy -p 80:80 -p 443:443 marcbachmann/caddy:0.10.6-amd64-semi caddy -conf /etc/caddy/Caddyfile
+```
+
+## Acknowledgements
 
 Thanks to @joshix for the initial setup in https://github.com/joshix/caddybox
 
