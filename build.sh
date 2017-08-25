@@ -11,9 +11,11 @@ PLUGINS=${PLUGINS:-}
 
 buildArch () {
   local arch=$1
-  echo Download and extract caddy for ARCH $arch with plugins \'$PLUGINS\'
+  local url=https://caddyserver.com/download/linux/$arch?plugins=$PLUGINS
+  echo Download and extract caddy for Arch $arch, url $url
   mkdir -p ./tmp
-  curl https://caddyserver.com/download/linux/$arch?plugins=$PLUGINS | tar -C ./tmp -xz caddy
+  curl --fail $url > ./tmp/archive
+  cat ./tmp/archive | tar -C ./tmp -xz caddy
   chmod +x ./tmp/caddy
   echo Build caddy image...
   docker build -t caddy .
