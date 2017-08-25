@@ -28,7 +28,7 @@ e.g. `latest-amd64-raw`
 
 ### Plugins
 - `raw`, no plugins
-- `semi`, http.cache,http.cors,http.expires,http.filter,http.prometheus,http.realip
+- `semi`, http.cache,http.cors,http.expires,http.filter,http.prometheus,http.realip,http.reauth
 
 ## SSL Certificates
 
