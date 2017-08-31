@@ -11,8 +11,10 @@ docker run -p 80:80 443:443 \
 ```
 
 ### Tags
-- `latest-$arch-raw`, `0.10.6-$arch-$plugins`
-- `latest-$arch-semi`, `0.10.6-$arch-$plugins`
+- `latest-$arch-raw`, `0.10.7-$arch-$plugins`
+- `latest-$arch-semi`, `0.10.7-$arch-$plugins`
+- `0.10.6-$arch-$plugins`
+- `0.10.6-$arch-$plugins`
 
 Please replace `$arch` and `$plugins` with the keywords below:
 
